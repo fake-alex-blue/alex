@@ -29,6 +29,7 @@ In designing this site I wanted something that was visually striking and which u
 The interactive on-scroll animation helps to drive engagement with the text.  
 
 ---
+
 ### Check it Out
 
 <br>
@@ -36,7 +37,9 @@ The interactive on-scroll animation helps to drive engagement with the text.
 [Click here to view the site in your browser.](https://fake-alex-blue.github.io/alex/)
 
 <br>
+
 ---
+
 ### Limitations
 
 - **Accessibililty** <br> Although not completely asemantic in its design, the site doesn't make the most of modern accessibility options. And it certainly isn't currently suitable for users who prefer reduced motion.
