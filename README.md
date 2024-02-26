@@ -4,7 +4,7 @@ This repository contains the source code for my personal website, which is hoste
 
 ### About
 
-This ssite was created as part of my application to [Founders and Coders](https://www.foundersandcoders.com/) software development bootcamp. 
+This site was created as part of my application to [Founders and Coders](https://www.foundersandcoders.com/) software development bootcamp. 
 
 It's a very simple 'about me' website. 
 
