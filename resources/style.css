@@ -1,0 +1,400 @@
+/* == CSS Reset == */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* === Font / Text Styling === */
+
+body {
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+.hero-text {
+    margin-top: 1%;
+    font-size: 18em;
+    white-space: nowrap;
+}
+
+.subhero-text {
+    position: relative;
+    font-size: 12em;
+}
+
+.body-text {
+    font-size: 9em;
+}
+
+.body-text span,
+.smaller-text span {
+    font-weight: 400
+}
+
+.smaller-text {
+    font-size: 6em;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.thin {
+    font-weight: 200;
+}
+
+nav {
+    font-size: 5em;
+    line-height: 1.5em;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav a img{
+    position: relative;
+    top:0.2em;
+    height: 1.2em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* === Positioning/Layout === */
+
+.layout {
+    padding: 5%;
+}
+
+.top-gap {
+    min-height: 18vh;
+}
+
+.sticky {
+    position: sticky;
+    top: 30%;
+}
+
+.body-l-2 {
+    top: 45%
+}
+
+.body-l-3 {
+    top: 60%
+}
+
+.title-sticky {
+    position:sticky;
+    top:0%;
+    z-index: 2;
+}
+
+.scroll-gap {
+    position: relative;
+    min-height: 50vh;
+    width:10px;
+    left: -60px;
+    background-image: linear-gradient(to bottom, white, gray);
+    opacity:0;
+}
+
+.half {
+    min-height: 25vh;
+}
+
+.text {
+    position: absolute;
+}
+
+.spacer{
+    height:12em;
+}
+
+.hero-text{
+    width: 94.2vw;
+    height: 1em;
+}
+
+#text_02{
+    left:0.14ch;
+    width: 8ch;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#text_03{
+    left:0.52ch;
+    width: 0.5ch;
+    white-space: nowrap;
+    overflow:hidden;
+    transition: opacity 0.8s;
+}
+
+.push-right {
+    position:relative;
+    left: 0.26ch;
+}
+
+.body-text{
+    position:relative;
+    left: 0.52ch;
+}
+
+nav{
+    position: fixed;
+    top: 40%;
+    left: 9%;
+    z-index: -1
+}
+
+/* === Colour & Lack Therof === */
+
+.whitebg {
+    background-color: white;
+}
+
+hr {
+    border: 0;
+    border-top: 0.3em solid black;
+    border-left: 0.3em solid black;
+}
+
+.colorbox {
+    position: fixed;
+    height: 200vh;
+    width: 100vw;
+    top: -200vh;
+    clip-path: url(./#dripClip); 
+    background-image: url(gradientSplash.png);
+    background-size: 100% 200%;
+    background-position: 0% -100%;
+    z-index: -2;
+}
+
+.splash {
+    animation: dropin 4s ease-in forwards;
+}
+
+.unsplash {
+    animation: dropout 3s ease-in forwards;
+}
+
+@keyframes dropin {
+    0% {
+        top: -200vh;
+        background-position: 0% 100%;
+    }
+    50% {
+        top: 0vh;
+        background-position: 0% 60%;
+    }
+    100% {
+        top: 0vh;
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes dropout {
+    0% {
+        top: 0vh;
+        background-position: 0% 0%;
+    }
+    50% {
+        top: 0vh;
+        background-position: 0% 60%;
+    }
+    
+    100% {
+        top: -200vh;
+        background-position: 0% 100%;
+    }
+}
+
+.content{
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+    background-image: linear-gradient(
+        180deg,
+        hsl(0deg 100% 100%) 0%,
+        hsl(300deg 100% 100%) 30%,
+        #5777ff 50%,
+        hsl(206deg 0% 0%) 51%
+        );
+    background-position: 0 100%;
+    background-size: 400% 400%;
+}
+
+.titlesplash {
+    animation: whiteout 3.2s linear forwards;
+}
+
+.titleunsplash {
+    animation: blackout 2.1s linear forwards;
+}
+
+@keyframes whiteout {
+    0%, 30%{
+        background-position: 0 100%;
+    }
+    48%, 60%{
+        background-position: 100% 0%;
+    }
+    70%, 100%{
+        background-position: 100% 0%;
+    }
+}
+
+@keyframes blackout {
+    0%, 30%{
+        background-position: 100% 0%;
+    }
+    48%, 60%{
+        background-position: 100% 0%;
+    }
+    70%, 100%{
+        background-position: 0 100%;
+    }
+}
+
+nav a {
+    color: white;
+}
+
+nav a img{
+    filter:saturate(0) brightness(100);
+}
+.hoverable a:hover {
+    color:#df8ce3;
+}
+
+.hoverable a:hover img{
+    filter:saturate(1);
+}
+
+/* === Hide and Show === */
+
+.text-fade {
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.text-fade-slow {
+    opacity: 0;
+    transition: opacity 5s linear;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+
+.delete {
+    animation: backspace 0.8s step-end forwards;
+}
+
+@keyframes backspace {
+    0% {width: 8ch}
+    10% {width: 7.03ch}
+    20% {width: 6.5ch}
+    30% {width: 5.5ch}
+    40% {width: 4.5ch}
+    50% {width: 3.8ch}
+    60% {width: 3.2ch}
+    70% {width: 2.3ch}
+    80% {width: 1.4ch}
+    90% {width: 0.64ch}
+    100% {width: 0.64ch}
+}
+
+.type {
+    opacity: 1;
+    animation: type_03 0.8s step-end forwards 1.2s;
+}
+
+@keyframes type_03 {
+    0% {width: 0.5ch}
+    5% {width: 0.8ch}
+    10% {width: 2.3ch}
+    15% {width: 2.8ch}
+    20% {width: 3.7ch}
+    25% {width: 4.7ch}
+    30% {width: 5.0ch}
+    35% {width: 6.2ch}
+    40% {width: 6.8ch}
+    45% {width: 7.4ch}
+    50% {width: 7.8ch}
+    55% {width: 8.7ch}
+    60% {width: 9.3ch}
+    65% {width: 9.7ch}
+    70% {width: 10.9ch}
+    75% {width: 11.3ch}
+    80% {width: 12.9ch}
+    85% {width: 14.0ch}
+    90% {width: 14.75ch}
+    95% {width: 15.6ch}
+    100% {width: 16.5ch}
+}
+
+.up-together {
+    transform: translateY(0vh);
+    transition: transform 0.7s ease-out;
+}
+
+.go-up {
+    transform: translateY(-100vh);
+    transition: transform 1s ease-in;
+}
+
+hr {
+    position:absolute;
+    left: 0;
+    height: 0;
+    width:100%;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+}
+
+.squash-grow {
+    height: 52vh;
+    width: 0;
+    transition: width 1s ease-in-out, height 1s ease-in-out, left 1.5s cubic-bezier( 0.3, -0.1, 0.75, 0.06 );
+}
+
+.swipe-out-right {
+    left: 100vw;
+    transition: width 1s ease-in-out, height 1s ease-in-out, left 1.5s cubic-bezier( 0.3, -0.1, 0.75, 0.06 );
+}
+
+.swipe-L{
+    position:absolute;
+    top:20%;
+    left: -80vw
+}
+
+.swipe-in-left{
+    left: 0vw;
+    transition: opacity 1.8s ease-in-out, left 1.5s cubic-bezier( 0.3, -0.1, 0.75, 0.06 );
+}
