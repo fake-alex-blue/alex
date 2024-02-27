@@ -178,8 +178,6 @@ let scale = screen.width /siteWidth;
 
 document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
 
-console.log(document.querySelector('meta[name="viewport"]'))
-
 // == Return to Top & Reset on Reload ==
 
 window.onload = function() {
